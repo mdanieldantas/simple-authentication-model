@@ -1,6 +1,6 @@
 let users = [
-    {username:"isac", password:"123"},
-    {username:"joao", password:"456"},
+    {username:"isac", password:"123", role:"admin"},
+    {username:"joao", password:"456", role:"stand"},
 ]
 
 
