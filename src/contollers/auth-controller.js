@@ -1,6 +1,6 @@
 let users = [
-    {username:"isac", password:"123456"},
-    {username:"joao", password:"654321"},
+    {username:"isac", password:"123"},
+    {username:"joao", password:"456"},
 ]
 
 
@@ -21,6 +21,10 @@ register: (req, res) => {
 
     const newUser = { username, password };
     users.push(newUser);
+
+    req.session.authenticated = true;
+    req.session.currentUser = newUser;
+
     return res.redirect("/dashboard");   
 },
 

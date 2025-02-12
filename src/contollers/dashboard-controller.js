@@ -7,8 +7,7 @@ module.exports = {
     // }
     console.log(req.session.authenticated);
     console.log(req.session.currentUser);
-    res.render("dashboard", {
-      user: {user:req.session.currentUser},
-    });
+    const currentUser = req.session.currentUser.username;
+    res.render("dashboard", {user: {currentUser}});
   },
 };
