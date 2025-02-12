@@ -1,6 +1,6 @@
 let users = [
     {username:"isac", password:"123", role:"admin"},
-    {username:"joao", password:"456", role:"stand"},
+    {username:"joao", password:"456", role:"standard"},
 ]
 
 
@@ -19,7 +19,7 @@ register: (req, res) => {
       return res.status(400).redirect("/");
     }
 
-    const newUser = { username, password };
+    const newUser = { username, password, role: "standard" };
     users.push(newUser);
 
     req.session.authenticated = true;
